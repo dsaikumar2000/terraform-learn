@@ -1,9 +1,5 @@
-variable "service_account_name" {
-  description = "The name of the service account"
-  type        = string
-}
-
-variable "service_account_display_name" {
-  description = "The display name of the service account"
-  type        = string
+# Service Account
+resource "google_service_account" "sa" {
+  account_id   = "demo-sa"
+  display_name = "Demo Service Account"
 }
