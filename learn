@@ -10,6 +10,20 @@ Cloud Storage Bucket → object storage for files/data
 
 IAM & Service Accounts → access control and permissions
 
+Look at the GCP resource types:
+
+Compute Engine → google_compute_instance
+
+VPC Network → google_compute_network
+
+Subnet → google_compute_subnetwork
+
+Storage Bucket → google_storage_bucket
+
+Service Account → google_service_account
+
+IAM Binding → google_project_iam_binding
+
 VPC & SUBNETS:
 # VPC Network
 resource "google_compute_network" "vpc_network" {
@@ -49,3 +63,8 @@ resource "google_storage_bucket" "bucket" {
   force_destroy = true
 }
 
+Service account :
+resource "google_service_account" "demo_sa" {
+  account_id   = "demo-service-account"
+  display_name = "Demo Service Account"
+}
